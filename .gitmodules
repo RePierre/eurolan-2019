@@ -1,0 +1,4 @@
+[submodule "nlp-cube"]
+	path = nlp-cube
+	url = git@github.com:RePierre/NLP-Cube.git
+	branch = dev.docker
