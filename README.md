@@ -1,7 +1,8 @@
 # [EuroLAN 2019](http://eurolan.info.uaic.ro/2019/index.html) #
 
 ## Prerequisites ##
-- [Git for Windows](https://git-scm.com/download/win)
+- [Git for Windows](https://git-scm.com/download/win).
+- [Romanian Word Embeddings from fastText](https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.ro.300.vec.gz). Donwload and unzip the file; you'll need it for training the model.
 
 ## Setting up the environment ##
 
@@ -23,6 +24,10 @@ Run the installer and follow the on-screen instructions to get `Docker` on your 
 - In the `Target Directory` specify where you want to clone (something like `C:\Git\eurolan-2019`)
 - Make sure that `Recursively clone submodules` checkbox is checked
 - Press the `Clone` button
+
+### Populate the `data` directory ###
+- Copy the word embeddings file from Prerequisites section into `data` directory.
+- Copy the corpus files into `data\corpus` directory.
 
 ### Build the `NLP-Cube` image ###
 This step will build a `Docker` image of [NLP-Cube](https://github.com/adobe/NLP-Cube) - an open source natural language processing pipeline.
