@@ -38,7 +38,7 @@ To buid the image:
 - Run the following command
 
 ``` powershell
-docker build -t eurolan2019/nlp-cube -f .\nlp-cube\docker\Dockerfile --build-arg extranotebook=notebooks/eurolan-2019.ipynb --build-arg extranotebookname=eurolan-2019 .
+docker build -t eurolan2019/nlp-cube -f .\nlp-cube\docker\Dockerfile --build-arg extranotebook=notebooks/eurolan-2019.ipynb --build-arg extranotebookname="6. EUROLAN 2019" .
 ```
 **Note**: Make sure to include the final `.` in the command. It specifies the build context.
 
