@@ -38,3 +38,21 @@ docker build -t eurolan2019/nlp-cube -f .\nlp-cube\docker\Dockerfile --build-arg
 **Note**: Make sure to include the final `.` in the command. It specifies the build context.
 
 When the build is finished, run `docker images` in the same command window. You should see `eurolan2019/nlp-cube` in the `REPOSITORY` column of the output.
+
+### Running `NLP-Cube` ###
+To run the `NLP-Cube` open a command prompt or PowerShell as administrator and run the following command:
+
+``` powershell
+docker run -p 8888:8888 --name nlp-cube eurolan2019/nlp-cube
+```
+
+In the output, find the lines similar to the lines below:
+``` powershell
+
+    To access the notebook, open this file in a browser:
+        file:///root/.local/share/jupyter/runtime/nbserver-7-open.html
+
+    Or copy and paste one of these URLs:
+        http://(a588c2c2adde or 127.0.0.1):8888/?token=27b88ef0a9c5d4c74ec54846be42ab9b1215a05adac4ce35
+```
+Copy the URL from the output and paste it in the browser. It will open the [Jupyter Notebook Server](https://jupyter.org/) interface. From there, click on the `examples` folder and afterwards on the `eurolan-2019.ipynb` file.
