@@ -23,3 +23,18 @@ Run the installer and follow the on-screen instructions to get `Docker` on your 
 - In the `Target Directory` specify where you want to clone (something like `C:\Git\eurolan-2019`)
 - Make sure that `Recursively clone submodules` checkbox is checked
 - Press the `Clone` button
+
+### Build the `NLP-Cube` image ###
+This step will build a `Docker` image of [NLP-Cube](https://github.com/adobe/NLP-Cube) - an open source natural language processing pipeline.
+
+To buid the image:
+- Open a command prompt or PowerShell as administrator
+- Navigate to the directory where the repository was cloned (e.g. `cd C:\Git\eurolan-2019`)
+- Run the following command
+
+``` powershell
+docker build -t eurolan2019/nlp-cube -f .\nlp-cube\docker\Dockerfile --build-arg extranotebook=notebooks/eurolan-2019.ipynb --build-arg extranotebookname=eurolan-2019 .
+```
+**Note**: Make sure to include the final `.` in the command. It specifies the build context.
+
+When the build is finished, run `docker images` in the same command window. You should see `eurolan2019/nlp-cube` in the `REPOSITORY` column of the output.
