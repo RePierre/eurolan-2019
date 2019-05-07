@@ -3,6 +3,7 @@
 ## Prerequisites ##
 - [Git for Windows](https://git-scm.com/download/win).
 - [Romanian Word Embeddings from fastText](https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.ro.300.vec.gz). Donwload and unzip the file; you'll need it for training the model.
+- Transformer from TreeBank xml to CoNLL-U format (download link will be provided).
 
 ## Setting up the environment ##
 
