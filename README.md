@@ -49,7 +49,13 @@ When the build is finished, run `docker images` in the same command window. You 
 To run the `NLP-Cube` open a command prompt or PowerShell as administrator and run the following command:
 
 ``` powershell
-docker run -p 8888:8888 --name nlp-cube eurolan2019/nlp-cube
+docker run -p 8888:8888 -v <path to repository>/data:/data --name nlp-cube eurolan2019/nlp-cube
+```
+Make sure to replace `<path to repository>` with the path where the repository was cloned and replace `\` with `/`.
+E.g. If you cloned the repository in `C:\Git\eurolan-2019` use the following:
+
+``` powershell
+docker run -p 8888:8888 -v /c/Git/eurolan-2019/data:/data --name nlp-cube eurolan2019/nlp-cube
 ```
 
 In the output, find the lines similar to the lines below:
