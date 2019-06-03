@@ -102,3 +102,11 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Emacs backup files
+*~
+
+# Data folder but not the README files
+data
+!data/README.md
+!data/corpus/README.md
